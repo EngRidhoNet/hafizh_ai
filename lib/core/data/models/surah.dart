@@ -26,4 +26,18 @@ class Surah {
           .toList(),
     );
   }
+
+  /// Get all tokens dari semua ayat - Method ini yang missing!
+  List<String> getAllTokens() {
+    return ayahs.expand((ayah) => ayah.tokens).toList();
+  }
+
+  /// Get specific ayah
+  Ayah? getAyah(int number) {
+    try {
+      return ayahs.firstWhere((ayah) => ayah.number == number);
+    } catch (e) {
+      return null;
+    }
+  }
 }

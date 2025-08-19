@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
-import 'features/recorder/recorder_page.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'features/reading/views/reading_view.dart';
 
-void main() => runApp(const App());
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
 
-class App extends StatelessWidget {
-  const App({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Hafizh AI',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.green),
-      home: const RecorderPage(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        useMaterial3: true,
+      ),
+      home: const ReadingView(),
     );
   }
 }

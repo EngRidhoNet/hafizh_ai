@@ -17,6 +17,10 @@ dependencies:
   # Audio
   record: ^5.0.4
   path_provider: ^2.1.1
+
+  # Speech Recognition
+  speech_to_text: ^6.6.0
+  permission_handler: ^11.0.1
   
   # Database
   drift: ^2.14.0
